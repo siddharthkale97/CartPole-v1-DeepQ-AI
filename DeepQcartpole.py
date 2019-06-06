@@ -145,26 +145,6 @@ class TrainSolver:
     def return_trained_model(self):
         return self.model
 
-    # def plot_evaluation(self, average_of_last_runs = 100):
-    #     print(self.model.summary())
-    #     self.average_of_last_runs = average_of_last_runs
-    #     avg_score = mean(self.score_table[1])
-    #     print(avg_score)
-    #     x = []
-    #     y = []
-    #     for i in range(len(self.score_table)):
-    #         x.append(self.score_table[i][0])
-    #         y.append(self.score_table[i][1])
-    #
-    #     average_range = self.average_of_last_runs if self.average_of_last_runs is not None else len(x)
-    #     plt.plot(x, y, label="score per run")
-    #     plt.plot(x[-average_range:], [np.mean(y[-average_range:])] * len(y[-average_range:]), linestyle="--",
-    #              label="last " + str(average_range) + " runs average")
-    #     plt.title("CartPole-v1")
-    #     plt.xlabel("Runs")
-    #     plt.ylabel("Score")
-    #     plt.show()
-
     def play(self, play_episodes=100, load_model=False, model_weights_dir=None, trained_model=None):
 
         self.play_episodes = play_episodes
